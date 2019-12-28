@@ -39,7 +39,7 @@ steps:
   displayName: 'Publish NuGet package'
   inputs:
     command: 'push'
-    publishVstsFeed: '7fcff5d5-490a-46d2-aa98-7552b55ea5e5/4e3f08a1-e183-4707-8798-e81c4c21f578'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
     nuGetFeedType: 'internal'
-  condition: succeeded()
+    publishVstsFeed: '7fcff5d5-490a-46d2-aa98-7552b55ea5e5/6444bf0e-f7fe-4ade-a2a1-89caca534425'
+    allowPackageConflicts: true
