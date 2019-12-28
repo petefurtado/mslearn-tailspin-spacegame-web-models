@@ -38,7 +38,7 @@ steps:
 - task: NuGetAuthenticate@0
   displayName: 'NuGet Authenticate'
 
-  - task: NuGetCommand@2
+- task: NuGetCommand@2
   displayName: 'Publish NuGet package'
   inputs:
     command: push
