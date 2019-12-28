@@ -41,7 +41,7 @@ steps:
 - task: NuGetCommand@2
   displayName: 'Publish NuGet package'
   inputs:
-    command: push
+    command: 'push'
     publishVstsFeed: 'Tailspin.SpaceGame.Web.Models'
     allowPackageConflicts: true
   condition: succeeded()
