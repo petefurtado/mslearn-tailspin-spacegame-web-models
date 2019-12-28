@@ -38,8 +38,8 @@ steps:
 - task: NuGetCommand@2
   displayName: 'Publish NuGet package'
   inputs:
-	command: push
-	packagesToPush: '$(Pipeline.Workspace)/**/*.nupkg'
+    command: push
+    packagesToPush: '$(Pipeline.Workspace)/**/*.nupkg'
     publishVstsFeed: 'Tailspin.SpaceGame.Web.Models'
     allowPackageConflicts: true
   condition: succeeded()
