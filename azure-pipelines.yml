@@ -35,13 +35,11 @@ steps:
     minorVersion: '0'
     patchVersion: '0'
  
-- task: NuGetAuthenticate@0
-  displayName: 'NuGet Authenticate'
-
 - task: NuGetCommand@2
   displayName: 'Publish NuGet package'
   inputs:
     command: 'push'
-    publishVstsFeed: 'Tailspin.SpaceGame.Web.Models'
-    allowPackageConflicts: true
+    publishVstsFeed: '7fcff5d5-490a-46d2-aa98-7552b55ea5e5/4e3f08a1-e183-4707-8798-e81c4c21f578'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
   condition: succeeded()
